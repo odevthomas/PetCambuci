@@ -1,0 +1,10 @@
+import CheckoutPage from "@/pages/CheckoutPage";
+import { CartProvider } from "@/context/CartContext";
+
+export default function CheckoutStoryboard() {
+  return (
+    <CartProvider>
+      <CheckoutPage />
+    </CartProvider>
+  );
+}
