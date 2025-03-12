@@ -11,7 +11,7 @@ const Header = () => {
     <header className="w-full bg-[#120f11] shadow-sm py-4 px-6 flex justify-between items-center sticky top-0 z-50">
       <div className="flex items-center space-x-2">
         <Link to="/" className="text-2xl font-bold text-white">
-          <img src="/public/logo.png" alt="" className="h-8" />
+          <img src="/logo.png" alt="" className="h-8" />
         </Link>
       </div>
 
