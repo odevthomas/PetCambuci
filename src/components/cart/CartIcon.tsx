@@ -12,7 +12,7 @@ const CartIcon = () => {
     <>
       <Button
         variant="ghost"
-        className="p-2 text-black hover:text-yellow-700 transition-colors relative"
+        className="p-2 text-white hover:text-yellow-700 transition-colors relative"
         onClick={() => setIsCartOpen(true)}
         aria-label="Abrir carrinho"
       >

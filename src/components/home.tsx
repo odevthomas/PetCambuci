@@ -13,27 +13,27 @@ function Home() {
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="bg-yellow-400 text-black py-16 relative overflow-hidden">
-          <div className="absolute inset-0 opacity-20">
-            <img
-              src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=1200&q=80"
-              alt="Fundo de animais"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="container mx-auto px-6 text-center relative z-10">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Bem-vindo ao PetShop
-            </h1>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Seu destino completo para todos os produtos e serviços para seu
-              animal de estimação
-            </p>
-            <Button size="lg" asChild>
-              <Link to="/produtos">Comprar Agora</Link>
-            </Button>
-          </div>
-        </section>
+        <section className="bg-[#f6a615] text-black relative overflow-hidden h-[100vh] flex items-center">
+  <div className="absolute inset-0">
+    <img
+      src="/banner(3).png"
+      alt="Fundo de animais"
+      className="w-full h-full object-cover"
+    />
+  </div>
+  <div className="container mx-auto px-6 text-center relative z-10">
+    <h1 className="text-4xl md:text-5xl mt-10 text-gray-100 font-bold mb-4">
+      Bem-vindo ao PetShop
+    </h1>
+    <p className="text-xl mb-8 text-gray-100 max-w-2xl mx-auto">
+      Seu destino completo para todos os produtos e serviços para seu
+      animal de estimação
+    </p>
+    <Button size="lg" asChild>
+      <Link to="/produtos">Comprar Agora</Link>
+    </Button>
+  </div>
+</section>
 
         {/* Categorias em Destaque */}
         <section className="py-12 bg-white">
@@ -43,38 +43,38 @@ function Home() {
             </h2>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="bg-yellow-50 rounded-lg p-4 text-center hover:bg-yellow-100 transition-colors">
+              <div className="bg-[#f6a615]rounded-lg p-4 text-center hover:bg-[#f6a615] transition-colors">
                 <img
-                  src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&q=80"
+                  src="/Card(1).webp"
                   alt="Ração para Cães"
-                  className="w-full h-40 object-cover rounded-lg mb-3"
+                  className="w-full h-70 object-cover rounded-lg mb-3"
                 />
                 <h3 className="font-medium">Ração para Cães</h3>
               </div>
 
-              <div className="bg-yellow-50 rounded-lg p-4 text-center hover:bg-yellow-100 transition-colors">
+              <div className="bg-[#f6a615]rounded-lg p-4 text-center hover:bg-[#f6a615] transition-colors">
                 <img
-                  src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?w=400&q=80"
+                  src="/Card(2).webp"
                   alt="Ração para Gatos"
-                  className="w-full h-40 object-cover rounded-lg mb-3"
+                  className="w-full h-70 object-cover rounded-lg mb-3"
                 />
                 <h3 className="font-medium">Ração para Gatos</h3>
               </div>
 
-              <div className="bg-yellow-50 rounded-lg p-4 text-center hover:bg-yellow-100 transition-colors">
+              <div className="bg-[#f6a615]rounded-lg p-4 text-center hover:bg-[#f6a615] transition-colors">
                 <img
-                  src="https://images.unsplash.com/photo-1603189343302-e603f7add05a?w=400&q=80"
+                  src="/Card(3).webp"
                   alt="Brinquedos"
-                  className="w-full h-40 object-cover rounded-lg mb-3"
+                  className="w-full h-70 object-cover rounded-lg mb-3"
                 />
                 <h3 className="font-medium">Brinquedos</h3>
               </div>
 
-              <div className="bg-yellow-50 rounded-lg p-4 text-center hover:bg-yellow-100 transition-colors">
+              <div className="bg-[#f6a615]rounded-lg p-4 text-center hover:bg-[#f6a615] transition-colors">
                 <img
-                  src="https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?w=400&q=80"
+                  src="/Card(4).webp"
                   alt="Acessórios"
-                  className="w-full h-40 object-cover rounded-lg mb-3"
+                  className="w-full h-70 object-cover rounded-lg mb-3"
                 />
                 <h3 className="font-medium">Acessórios</h3>
               </div>
@@ -92,7 +92,7 @@ function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Banho e Tosa */}
               <div className="bg-white rounded-lg shadow-sm p-6 flex flex-col items-center text-center">
-                <div className="bg-yellow-100 p-3 rounded-full mb-4">
+                <div className="bg-[#f6a615] p-3 rounded-full mb-4">
                   <Scissors className="h-8 w-8 text-black" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Banho e Tosa</h3>
@@ -107,7 +107,7 @@ function Home() {
 
               {/* Localização */}
               <div className="bg-white rounded-lg shadow-sm p-6 flex flex-col items-center text-center">
-                <div className="bg-yellow-100 p-3 rounded-full mb-4">
+                <div className="bg-[#f6a615] p-3 rounded-full mb-4">
                   <MapPin className="h-8 w-8 text-black" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Nossas Lojas</h3>
@@ -121,7 +121,7 @@ function Home() {
 
               {/* Entrega */}
               <div className="bg-white rounded-lg shadow-sm p-6 flex flex-col items-center text-center">
-                <div className="bg-yellow-100 p-3 rounded-full mb-4">
+                <div className="bg-[#f6a615] p-3 rounded-full mb-4">
                   <Truck className="h-8 w-8 text-black" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">
@@ -152,7 +152,7 @@ function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Plano Básico */}
               <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-                <div className="p-6 bg-yellow-50 border-b">
+                <div className="p-6 bg-[#f6a615]border-b">
                   <h3 className="text-xl font-semibold text-center">
                     Plano Básico
                   </h3>
@@ -164,15 +164,15 @@ function Home() {
                 <div className="p-6">
                   <ul className="space-y-3">
                     <li className="flex items-center">
-                      <Heart className="h-5 w-5 text-yellow-500 mr-2" />
+                      <Heart className="h-5 w-5 text-[#f6a615] mr-2" />
                       <span>Ração premium (2kg)</span>
                     </li>
                     <li className="flex items-center">
-                      <Heart className="h-5 w-5 text-yellow-500 mr-2" />
+                      <Heart className="h-5 w-5 text-[#f6a615] mr-2" />
                       <span>2 brinquedos por mês</span>
                     </li>
                     <li className="flex items-center">
-                      <Heart className="h-5 w-5 text-yellow-500 mr-2" />
+                      <Heart className="h-5 w-5 text-[#f6a615] mr-2" />
                       <span>Entrega gratuita</span>
                     </li>
                   </ul>
@@ -181,11 +181,11 @@ function Home() {
               </div>
 
               {/* Plano Premium */}
-              <div className="bg-white rounded-lg shadow-sm overflow-hidden border-2 border-yellow-500 transform scale-105">
-                <div className="p-1 bg-yellow-500 text-black text-center text-sm font-medium">
+              <div className="bg-white rounded-lg shadow-sm overflow-hidden border-2 border-[#f6a615] transform scale-105">
+                <div className="p-1 bg-[#f6a615] text-black text-center text-sm font-medium">
                   Mais Popular
                 </div>
-                <div className="p-6 bg-yellow-50 border-b">
+                <div className="p-6 bg-[#f6a615]border-b">
                   <h3 className="text-xl font-semibold text-center">
                     Plano Premium
                   </h3>
@@ -197,23 +197,23 @@ function Home() {
                 <div className="p-6">
                   <ul className="space-y-3">
                     <li className="flex items-center">
-                      <Heart className="h-5 w-5 text-yellow-500 mr-2" />
+                      <Heart className="h-5 w-5 text-[#f6a615] mr-2" />
                       <span>Ração super premium (4kg)</span>
                     </li>
                     <li className="flex items-center">
-                      <Heart className="h-5 w-5 text-yellow-500 mr-2" />
+                      <Heart className="h-5 w-5 text-[#f6a615] mr-2" />
                       <span>4 brinquedos por mês</span>
                     </li>
                     <li className="flex items-center">
-                      <Heart className="h-5 w-5 text-yellow-500 mr-2" />
+                      <Heart className="h-5 w-5 text-[#f6a615] mr-2" />
                       <span>1 acessório exclusivo</span>
                     </li>
                     <li className="flex items-center">
-                      <Heart className="h-5 w-5 text-yellow-500 mr-2" />
+                      <Heart className="h-5 w-5 text-[#f6a615] mr-2" />
                       <span>Entrega gratuita</span>
                     </li>
                     <li className="flex items-center">
-                      <Heart className="h-5 w-5 text-yellow-500 mr-2" />
+                      <Heart className="h-5 w-5 text-[#f6a615] mr-2" />
                       <span>10% de desconto em serviços</span>
                     </li>
                   </ul>
@@ -223,7 +223,7 @@ function Home() {
 
               {/* Plano Família */}
               <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-                <div className="p-6 bg-yellow-50 border-b">
+                <div className="p-6 bg-[#f6a615]border-b">
                   <h3 className="text-xl font-semibold text-center">
                     Plano Família
                   </h3>
@@ -235,27 +235,27 @@ function Home() {
                 <div className="p-6">
                   <ul className="space-y-3">
                     <li className="flex items-center">
-                      <Heart className="h-5 w-5 text-yellow-500 mr-2" />
+                      <Heart className="h-5 w-5 text-[#f6a615] mr-2" />
                       <span>Ração super premium (8kg)</span>
                     </li>
                     <li className="flex items-center">
-                      <Heart className="h-5 w-5 text-yellow-500 mr-2" />
+                      <Heart className="h-5 w-5 text-[#f6a615] mr-2" />
                       <span>6 brinquedos por mês</span>
                     </li>
                     <li className="flex items-center">
-                      <Heart className="h-5 w-5 text-yellow-500 mr-2" />
+                      <Heart className="h-5 w-5 text-[#f6a615] mr-2" />
                       <span>2 acessórios exclusivos</span>
                     </li>
                     <li className="flex items-center">
-                      <Heart className="h-5 w-5 text-yellow-500 mr-2" />
+                      <Heart className="h-5 w-5 text-[#f6a615] mr-2" />
                       <span>Entrega gratuita</span>
                     </li>
                     <li className="flex items-center">
-                      <Heart className="h-5 w-5 text-yellow-500 mr-2" />
+                      <Heart className="h-5 w-5 text-[#f6a615] mr-2" />
                       <span>20% de desconto em serviços</span>
                     </li>
                     <li className="flex items-center">
-                      <Heart className="h-5 w-5 text-yellow-500 mr-2" />
+                      <Heart className="h-5 w-5 text-[#f6a615] mr-2" />
                       <span>Consulta veterinária mensal</span>
                     </li>
                   </ul>
@@ -340,7 +340,7 @@ function Home() {
             <h2 className="text-3xl font-bold mb-4">Promoção Especial</h2>
             <p className="text-xl mb-6">
               Use o cupom{" "}
-              <span className="font-bold bg-yellow-400 text-black px-2 py-1 rounded">
+              <span className="font-bold bg-[#f6a615] text-black px-2 py-1 rounded">
                 PETLOVE10
               </span>{" "}
               e ganhe 10% de desconto na primeira compra!

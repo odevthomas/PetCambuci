@@ -27,7 +27,7 @@ const ServicosPage = () => {
       price: 49.9,
       duration: "1 hora",
       image:
-        "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=400&q=80",
+      "/Servicos/Servicos(1).jpeg",
     },
     {
       id: "banho-medio",
@@ -37,7 +37,7 @@ const ServicosPage = () => {
       price: 69.9,
       duration: "1.5 horas",
       image:
-        "https://images.unsplash.com/photo-1581888227599-779811939961?w=400&q=80",
+      "/Servicos/Servicos(2).jpeg",
     },
     {
       id: "banho-grande",
@@ -47,7 +47,7 @@ const ServicosPage = () => {
       price: 89.9,
       duration: "2 horas",
       image:
-        "https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?w=400&q=80",
+      "/Servicos/Servicos(3).jpeg",
     },
     {
       id: "tosa-higienica",
@@ -57,7 +57,7 @@ const ServicosPage = () => {
       price: 39.9,
       duration: "30 minutos",
       image:
-        "https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?w=400&q=80",
+      "/Servicos/Servicos(4).jpeg",
     },
     {
       id: "tosa-completa",
@@ -67,7 +67,7 @@ const ServicosPage = () => {
       price: 79.9,
       duration: "1.5 horas",
       image:
-        "https://images.unsplash.com/photo-1556015048-4d3aa10df74c?w=400&q=80",
+      "/Servicos/Servicos(5).jpeg",
     },
     {
       id: "combo-premium",
@@ -77,7 +77,7 @@ const ServicosPage = () => {
       price: 119.9,
       duration: "2.5 horas",
       image:
-        "https://images.unsplash.com/photo-1605244863941-3a3ed921c60d?w=400&q=80",
+      "/Servicos/Servicos(6).jpeg",
     },
   ];
 
@@ -90,7 +90,7 @@ const ServicosPage = () => {
       price: 120.0,
       duration: "30 minutos",
       image:
-        "https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=400&q=80",
+      "/Servicos/Veterinario(1).jpeg",
     },
     {
       id: "vacinacao",
@@ -100,7 +100,7 @@ const ServicosPage = () => {
       price: 90.0,
       duration: "15 minutos",
       image:
-        "https://images.unsplash.com/photo-1612531822129-ec4e4de9d0c2?w=400&q=80",
+      "/Servicos/Veterinario(2).jpeg",
     },
     {
       id: "exames-laboratoriais",
@@ -110,7 +110,7 @@ const ServicosPage = () => {
       price: 150.0,
       duration: "Varia conforme exame",
       image:
-        "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&q=80",
+      "/Servicos/Veterinario(3).jpeg",
     },
     {
       id: "castracao",
@@ -120,7 +120,7 @@ const ServicosPage = () => {
       price: 350.0,
       duration: "Procedimento + recuperação",
       image:
-        "https://images.unsplash.com/photo-1584794171574-fe3f84b43838?w=400&q=80",
+      "/Servicos/Veterinario(4).jpeg",
     },
   ];
 
@@ -133,7 +133,7 @@ const ServicosPage = () => {
       price: 120.0,
       duration: "1 hora",
       image:
-        "https://images.unsplash.com/photo-1551730459-92db2a308d6a?w=400&q=80",
+      "/Servicos/Aula(1).jpeg",
     },
     {
       id: "pacote-basico",
@@ -143,7 +143,7 @@ const ServicosPage = () => {
       price: 550.0,
       duration: "5 sessões de 1 hora",
       image:
-        "https://images.unsplash.com/photo-1591946614720-90a587da4a36?w=400&q=80",
+      "/Servicos/Aula(2).jpeg",
     },
     {
       id: "pacote-avancado",
@@ -153,7 +153,7 @@ const ServicosPage = () => {
       price: 990.0,
       duration: "10 sessões de 1 hora",
       image:
-        "https://images.unsplash.com/photo-1534361960057-19889db9621e?w=400&q=80",
+      "/Servicos/Aula(3).jpeg",
     },
   ];
 

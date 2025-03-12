@@ -34,88 +34,80 @@ const StoreDetails = ({
   },
 }: StoreDetailsProps) => {
   return (
-    <div className="bg-white rounded-lg shadow-sm p-6 w-full max-w-md">
-      {store.image && (
-        <div className="mb-4 rounded-lg overflow-hidden">
-          <img
-            src={store.image}
-            alt={store.name}
-            className="w-full h-48 object-cover"
-          />
-        </div>
-      )}
+    <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
+      <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-2xl md:max-w-4xl lg:max-w-5xl">
+        {store.image && (
+          <div className="mb-4 rounded-lg overflow-hidden w-full h-64 md:h-80 lg:h-96">
+            <img
+              src={store.image}
+              alt={store.name}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        )}
 
-      <h3 className="text-xl font-semibold text-gray-800 mb-4">{store.name}</h3>
+        <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">{store.name}</h3>
 
-      <div className="space-y-4">
-        <div className="flex items-start">
-          <MapPin className="h-5 w-5 text-yellow-600 mt-0.5 mr-3 flex-shrink-0" />
-          <div>
-            <p className="text-gray-700">{store.address}</p>
-            <p className="text-gray-700">
-              {store.city}, {store.state} {store.zip}
-            </p>
-            <p className="text-sm text-yellow-600 mt-1">
-              {store.distance} km de distância
-            </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex items-start">
+            <MapPin className="h-6 w-6 text-yellow-600 mt-0.5 mr-3" />
+            <div>
+              <p className="text-gray-700">{store.address}</p>
+              <p className="text-gray-700">
+                {store.city}, {store.state} {store.zip}
+              </p>
+              <p className="text-sm text-yellow-600 mt-1">
+                {store.distance} km de distância
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center">
+            <Phone className="h-6 w-6 text-yellow-600 mr-3" />
+            <p className="text-gray-700">{store.phone}</p>
+          </div>
+
+          <div className="flex items-start">
+            <Clock className="h-6 w-6 text-yellow-600 mt-0.5 mr-3" />
+            <div>
+              <p className="text-gray-700">Horário de Funcionamento</p>
+              <p className="text-gray-600">{store.hours}</p>
+            </div>
           </div>
         </div>
 
-        <div className="flex items-center">
-          <Phone className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0" />
-          <p className="text-gray-700">{store.phone}</p>
-        </div>
-
-        <div className="flex items-start">
-          <Clock className="h-5 w-5 text-yellow-600 mt-0.5 mr-3 flex-shrink-0" />
-          <div>
-            <p className="text-gray-700">Horário de Funcionamento</p>
-            <p className="text-gray-600">{store.hours}</p>
-          </div>
-        </div>
-
-        <div className="bg-yellow-50 p-3 rounded-lg">
+        <div className="bg-yellow-50 p-4 rounded-lg mt-6">
           <h4 className="font-medium text-black mb-2">Serviços Disponíveis</h4>
-          <ul className="space-y-1 text-sm text-yellow-700">
-            <li className="flex items-center">
-              <span className="w-2 h-2 bg-yellow-600 rounded-full mr-2"></span>
-              Banho e Tosa
-            </li>
-            <li className="flex items-center">
-              <span className="w-2 h-2 bg-yellow-600 rounded-full mr-2"></span>
-              Veterinário
-            </li>
-            <li className="flex items-center">
-              <span className="w-2 h-2 bg-yellow-600 rounded-full mr-2"></span>
-              Farmácia Pet
-            </li>
-            <li className="flex items-center">
-              <span className="w-2 h-2 bg-yellow-600 rounded-full mr-2"></span>
-              Loja Completa
-            </li>
+          <ul className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm text-yellow-700">
+            {["Banho e Tosa", "Veterinário", "Farmácia Pet", "Loja Completa"].map((service, index) => (
+              <li key={index} className="flex items-center">
+                <span className="w-2 h-2 bg-yellow-600 rounded-full mr-2"></span>
+                {service}
+              </li>
+            ))}
           </ul>
         </div>
-      </div>
 
-      <div className="mt-6 space-y-3">
-        <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black">
-          <MapPin className="h-4 w-4 mr-2" />
-          Como Chegar
-        </Button>
-        <Button
-          variant="outline"
-          className="w-full border-yellow-400 text-yellow-700 hover:bg-yellow-50"
-        >
-          <Phone className="h-4 w-4 mr-2" />
-          Ligar para Loja
-        </Button>
-        <Button
-          variant="outline"
-          className="w-full border-yellow-400 text-yellow-700 hover:bg-yellow-50"
-        >
-          <Calendar className="h-4 w-4 mr-2" />
-          Agendar Serviço
-        </Button>
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black flex justify-center">
+            <MapPin className="h-4 w-4 mr-2" />
+            Como Chegar
+          </Button>
+          <Button
+            variant="outline"
+            className="w-full border-yellow-400 text-yellow-700 hover:bg-yellow-50 flex justify-center"
+          >
+            <Phone className="h-4 w-4 mr-2" />
+            Ligar para Loja
+          </Button>
+          <Button
+            variant="outline"
+            className="w-full border-yellow-400 text-yellow-700 hover:bg-yellow-50 flex justify-center"
+          >
+            <Calendar className="h-4 w-4 mr-2" />
+            Agendar Serviço
+          </Button>
+        </div>
       </div>
     </div>
   );

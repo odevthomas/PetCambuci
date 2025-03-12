@@ -43,7 +43,7 @@ const ProdutosPage = () => {
       oldPrice: 149.9,
       rating: 4.8,
       image:
-        "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=400&q=80",
+        "/Produtos/produtos(1).jpeg",
       tags: ["Premium", "Adulto"],
       inStock: true,
     },
@@ -55,7 +55,7 @@ const ProdutosPage = () => {
       price: 99.9,
       rating: 4.7,
       image:
-        "https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=400&q=80",
+      "/Produtos/produtos(2).jpeg",
       tags: ["Super Premium", "Todas as Idades"],
       inStock: true,
     },
@@ -68,7 +68,7 @@ const ProdutosPage = () => {
       oldPrice: 59.9,
       rating: 4.5,
       image:
-        "https://images.unsplash.com/photo-1546975490-e8b92a360b24?w=400&q=80",
+      "/Produtos/produtos(3).jpeg",
       tags: ["Interativo", "Resistente"],
       inStock: true,
     },
@@ -80,7 +80,7 @@ const ProdutosPage = () => {
       price: 89.9,
       rating: 4.6,
       image:
-        "https://images.unsplash.com/photo-1545249390-6bdfa286032f?w=400&q=80",
+      "/Produtos/produtos(4).jpeg",
       tags: ["Casa", "Brinquedo"],
       inStock: true,
     },
@@ -92,7 +92,7 @@ const ProdutosPage = () => {
       price: 39.9,
       rating: 4.3,
       image:
-        "https://images.unsplash.com/photo-1567612529009-afe25301b6d0?w=400&q=80",
+      "/Produtos/produtos(5).jpeg",
       tags: ["Passeio", "Ajustável"],
       inStock: true,
     },
@@ -105,7 +105,7 @@ const ProdutosPage = () => {
       oldPrice: 249.9,
       rating: 4.9,
       image:
-        "https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?w=400&q=80",
+      "/Produtos/produtos(6).jpeg",
       tags: ["Ortopédica", "Idosos"],
       inStock: false,
     },
@@ -117,7 +117,7 @@ const ProdutosPage = () => {
       price: 29.9,
       rating: 4.4,
       image:
-        "https://images.unsplash.com/photo-1584305574647-0cc949a2bb9f?w=400&q=80",
+      "/Produtos/produtos(7).jpeg",
       tags: ["Hipoalergênico", "Suave"],
       inStock: true,
     },
@@ -129,7 +129,7 @@ const ProdutosPage = () => {
       price: 149.9,
       rating: 4.7,
       image:
-        "https://images.unsplash.com/photo-1553688738-a278b9f063e0?w=400&q=80",
+      "/Produtos/produtos(8).jpeg",
       tags: ["Viagem", "Segurança"],
       inStock: true,
     },

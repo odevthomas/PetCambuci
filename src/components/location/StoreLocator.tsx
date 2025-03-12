@@ -64,14 +64,14 @@ const StoreLocator = () => {
     },
   ];
 
+  // Função para filtrar lojas conforme o termo de busca
+  const filteredStores = stores.filter((store) =>
+    store.city.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    store.zip.includes(searchQuery)
+  );
+
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would filter stores based on the search query
-    console.log("Buscando por:", searchQuery);
-  };
-
-  const handleStoreSelect = (store: Store) => {
-    setSelectedStore(store);
   };
 
   return (
@@ -89,44 +89,51 @@ const StoreLocator = () => {
               className="pl-10"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
+              aria-label="Digite seu CEP ou cidade para buscar lojas próximas"
             />
           </div>
-          <Button type="submit">Buscar</Button>
+          <Button type="submit" aria-label="Buscar lojas">Buscar</Button>
         </form>
       </div>
 
       <div className="flex flex-col md:flex-row">
-        {/* Store list */}
+        {/* Lista de lojas */}
         <div className="w-full md:w-1/3 border-r border-gray-200 max-h-[400px] overflow-y-auto">
-          {stores.map((store) => (
-            <div
-              key={store.id}
-              className={`p-4 border-b border-gray-100 cursor-pointer hover:bg-gray-50 transition-colors ${selectedStore?.id === store.id ? "bg-blue-50" : ""}`}
-              onClick={() => handleStoreSelect(store)}
-            >
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="font-medium text-gray-900">{store.name}</h3>
-                  <p className="text-sm text-gray-600">
-                    {store.address}, {store.city}
-                  </p>
-                </div>
-                <div className="flex items-center text-sm text-yellow-600">
-                  <MapPin className="h-4 w-4 mr-1" />
-                  <span>{store.distance} km</span>
+          {filteredStores.length > 0 ? (
+            filteredStores.map((store) => (
+              <div
+                key={store.id}
+                className={`p-4 border-b border-gray-100 cursor-pointer hover:bg-gray-50 transition-colors ${
+                  selectedStore?.id === store.id ? "bg-blue-50 ring-2 ring-blue-500" : ""
+                }`}
+                onClick={() => setSelectedStore(store)}
+              >
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h3 className="font-medium text-gray-900">{store.name}</h3>
+                    <p className="text-sm text-gray-600">
+                      {store.address}, {store.city}
+                    </p>
+                  </div>
+                  <div className="flex items-center text-sm text-yellow-600">
+                    <MapPin className="h-4 w-4 mr-1" />
+                    <span>{store.distance} km</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p className="p-4 text-gray-500">Nenhuma loja encontrada.</p>
+          )}
         </div>
 
-        {/* Map placeholder */}
+        {/* Mapa placeholder */}
         <div className="w-full md:w-2/3 h-[300px] md:h-auto bg-gray-100 flex items-center justify-center relative">
-          {/* Mapa de fundo */}
           <img
             src="https://images.unsplash.com/photo-1569336415962-a4bd9f69c8bf?w=1200&q=80"
             alt="Mapa"
             className="w-full h-full object-cover absolute inset-0 opacity-50"
+            loading="lazy"
           />
 
           {selectedStore ? (
